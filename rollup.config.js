@@ -1,8 +1,9 @@
 import babel from '@rollup/plugin-babel';
-import { terser } from 'rollup-plugin-terser'; // Optional: for minification
+import { terser } from 'rollup-plugin-terser';
+import postcss from 'rollup-plugin-postcss';
 
 export default {
-  input: 'src/index.js', // Adjust to your entry point if it's different
+  input: 'src/index.js', // Your entry file
   output: [
     {
       file: 'dist/index.cjs.js', // CommonJS output
@@ -17,10 +18,15 @@ export default {
   plugins: [
     babel({
       exclude: 'node_modules/**',
-      presets: ['@babel/preset-react'],
+      presets: ['@babel/preset-env', '@babel/preset-react'],
       babelHelpers: 'bundled',
     }),
-    terser(), // Optional: minify the code
+    postcss({
+      extract: false, // Set to false to bundle the CSS into the JS
+      inject: true,   // Automatically inject CSS into the JS bundle
+      modules: true,  // Enable CSS Modules (optional if you are using them)
+    }),
+    terser(), // Optional minification
   ],
-  external: ['react', 'react-dom'], // Ensure React is treated as an external dependency
+  external: ['react', 'react-dom'], // Treat React as external
 };
