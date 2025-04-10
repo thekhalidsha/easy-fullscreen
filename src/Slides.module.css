@@ -1,0 +1,77 @@
+/* Container for the slides */
+.container {
+  position: relative;
+}
+
+/* Horizontal wrapper (for horizontal slides) */
+.x_wrapper {
+  overflow-x: auto;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+/* Vertical wrapper (for vertical slides) */
+.y_wrapper {
+  overflow-y: auto;
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+/* Slide alignment for both horizontal and vertical */
+.x_wrapper > *, .y_wrapper > * {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* For horizontal slides */
+.x_wrapper > * {
+  width: 100vw;
+  flex-shrink: 0;
+}
+
+/* For vertical slides */
+.y_wrapper > * {
+  height: 100vh;
+}
+
+/* Navigation dots container positioning */
+.nav-dots {
+  position: fixed;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+  flex-direction: row;
+}
+
+.dots-top,
+.dots-bottom {
+  flex-direction: row;
+}
+
+.dots-left,
+.dots-right {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style for individual navigation dots */
+.nav-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #c9d6de;
+  border-radius: 50%;
+  border: 2px solid #52616a;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Active state for the navigation dot */
+.nav-dot.active {
+  background-color: #47b8e0; /* Active dot color */
+  transform: scale(1.5); /* Enlarges the active dot */
+}

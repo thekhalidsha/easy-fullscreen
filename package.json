@@ -1,0 +1,45 @@
+{
+  "name": "@thekhalidsha/easy-fullscreen",
+  "version": "1.0.0",
+  "description": "A simple and lightweight React component for creating fullpage slides (horizontal or vertical)",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thekhalidsha/easy-fullpage.git"
+  },
+  "keywords": [
+    "easy-fullpage",
+    "react-easy-fullscreen",
+    "slide",
+    "fullscreen-slider",
+    "easy-slider",
+    "slides",
+    "swiper",
+    "swiperjs"
+  ],
+  "author": "Mohammed Khalid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thekhalidsha/easy-fullpage/issues"
+  },
+  "homepage": "https://github.com/thekhalidsha/easy-fullpage#readme",
+  "dependencies": {
+    "prop-types": "^15.8.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.27.0",
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "rollup": "^2.79.2",
+    "rollup-plugin-babel": "^4.4.0"
+  }
+}
