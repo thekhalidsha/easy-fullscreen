@@ -1,7 +1,7 @@
 
-# React Easy Fullpage
+# React Easy fullscreen
 
-**A simple and lightweight React component for creating fullpage slides (horizontal or vertical).**  
+**A simple and lightweight React component for creating fullscreen slides (horizontal or vertical).**  
 Perfect for portfolios, landing pages, and presentations.
 
 ---
@@ -10,7 +10,7 @@ Perfect for portfolios, landing pages, and presentations.
 
 - Super easy to use
 - Lightweight (zero dependencies)
-- Horizontal or vertical fullpage scrolling
+- Horizontal or vertical fullscreen scrolling
 - Customizable styling
 - Written in modern React
 
@@ -75,11 +75,14 @@ export default App;
 ## ⚙️ Props
 
 ### EasyFullScreen
+
 | Prop               | Type     | Default      | Description                                                    |
 |:-------------------:|:--------:|:------------:|:--------------------------------------------------------------:|
 | `direction`         | `string` | `"vertical"` | Scrolling direction: "vertical" or "horizontal"                |
 | `SliderWidth`       | `string` | `"100vw"`    | Width of the slider, defaults to full viewport width.          |
 | `SliderHeight`      | `string` | `"100vh"`    | Height of the slider, defaults to full viewport height.        |
+| `SlideWidth`        | `string` | `"100%"`     | Width of each individual slide, defaults to 100%.               |
+| `SlideHeight`       | `string` | `"100%"`     | Height of each individual slide, defaults to 100%.              |
 | `showDots`          | `boolean`| `true`       | Whether to display navigation dots or not.                     |
 | `dotColor`          | `string` | `"gray"`     | Color of inactive navigation dots.                             |
 | `activeDotColor`    | `string` | `"blue"`     | Color of the active navigation dot.                            |
@@ -89,6 +92,7 @@ export default App;
 | `style`             | `object` | `{}`         | Inline styles for the wrapper.                                 |
 | `animationDuration` | `number` | `700`        | Duration of scroll animation in milliseconds.                  |
 
+
 ---
 
 ## 🛠 Development
@@ -96,8 +100,8 @@ export default App;
 Clone the repo and install dependencies:
 
 ```bash
-git clone https://github.com/thekhalidsha/easy-fullpage.git
-cd easy-fullpage
+git clone https://github.com/thekhalidsha/easy-fullscreen.git
+cd easy-fullscreen
 npm install
 ```
 
