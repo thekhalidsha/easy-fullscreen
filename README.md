@@ -90,7 +90,6 @@ export default App;
 | `className`         | `string` | `""`         | Custom class name for the wrapper.                             |
 | `children`          | `ReactNode` | `null`      | The slides content. Each child represents a slide.             |
 | `style`             | `object` | `{}`         | Inline styles for the wrapper.                                 |
-| `animationDuration` | `number` | `700`        | Duration of scroll animation in milliseconds.                  |
 
 
 ---
