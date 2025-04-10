@@ -1,9 +1,15 @@
 {
   "name": "@thekhalidsha/easy-fullscreen",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple and lightweight React component for creating fullpage slides (horizontal or vertical)",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
+  "main": "./dist/index.cjs.js",  
+  "module": "./dist/index.esm.js", 
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs.js", 
+      "import": "./dist/index.esm.js"    
+    }
+  },
   "style": "dist/styles.css",
   "files": [
     "dist/*"

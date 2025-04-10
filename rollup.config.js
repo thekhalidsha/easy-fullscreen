@@ -1,3 +1,4 @@
+// rollup.config.js
 import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss';
@@ -6,12 +7,12 @@ export default {
   input: 'src/index.js', // Your entry file
   output: [
     {
-      file: 'dist/index.cjs.js', // CommonJS output
+      file: 'dist/index.cjs.js',
       format: 'cjs',
       exports: 'named',
     },
     {
-      file: 'dist/index.esm.js', // ESM output
+      file: 'dist/index.esm.js',
       format: 'esm',
     },
   ],
@@ -22,11 +23,11 @@ export default {
       babelHelpers: 'bundled',
     }),
     postcss({
-      extract: false, // Set to false to bundle the CSS into the JS
-      inject: true,   // Automatically inject CSS into the JS bundle
-      modules: true,  // Enable CSS Modules (optional if you are using them)
+      extract: false,
+      inject: true,
+      modules: true,
     }),
-    terser(), // Optional minification
+    terser(),
   ],
   external: ['react', 'react-dom'], // Treat React as external
 };
