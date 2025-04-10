@@ -1,1 +1,3 @@
-export { default as EasyFullScreen } from './EasyFullScreen'; 
+import EasyFullScreen from './EasyFullScreen';
+
+export { EasyFullScreen };
