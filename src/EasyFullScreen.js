@@ -13,6 +13,7 @@ const EasyFullScreen = ({
   activeDotColor = 'black',
   navPlacement = 'bottom',
   className = '',
+  autoPlay = false,
   ...rest
 }) => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -67,6 +68,8 @@ const EasyFullScreen = ({
     };
   }, [wrapperClass]);
 
+  
+
   const navDotsCount = children.length;
 
   // Dynamic style for nav dots container based on navPlacement (top, bottom, left, right)
@@ -83,6 +86,12 @@ const EasyFullScreen = ({
     if (navPlacement === 'top') navDotStyle.top = '20px';
     else navDotStyle.bottom = '20px';
   }
+  useEffect(()=>{
+    const autoPlayLoop = setTimeout(()=>{
+      setActiveSlide((prev) => (prev + 1) % children.length);
+    }, autoPlay)
+    clearTimeout(autoPlayLoop)
+  }, [autoPlay, activeSlide])
 
   return (
     <section
